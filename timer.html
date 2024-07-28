@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 45px;
+        height: 25px;
+        border: 2px solid black;
+        display: inline-block;
+        position: relative;
+        top: 110px;
+        left: 324px;
+        position: relative;
+        border: 3px solid white;
+        color: white;
+        text-align: center;
+        padding-top: 13px;
+      }
+      input {
+        display: block;
+        position: relative;
+        top: 150px;
+        left: 17px;
+        width: 70%;
+        height: 33px;
+        border: 2px solid white;
+      }
+      progress {
+        width: 98%;
+        height: 40px;
+        -webkit-appearance: none;
+        appearance: none;
+        left: 5px;
+        top: 100px;
+        position: relative;
+        background: white;
+      }
+
+      progress::-webkit-progress-bar {
+        background-color: #f3f3f3; /* Background color of the progress bar gor chrome*/
+      }
+
+      button {
+        background-color: #02ee26;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 8px;
+        transition-duration: 0.5s;
+        position: relative;
+        top: 134px;
+        left: 35px;
+      }
+      #Start {
+        background-color: rgb(7, 236, 7);
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      #Reset {
+        background: rgb(8, 137, 188);
+      }
+      #Pause {
+        background-color: red;
+      }
+      #Pause:hover {
+        background: darkred;
+        color: white;
+      }
+      #Pause:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+      .container {
+        position: absolute;
+        border: 23px soild black;
+        width: 400px;
+        height: 500px;
+        background: black;
+        /* background: hotpink; */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      label {
+        font-size: 40px;
+        color: white;
+        position: absolute;
+        top: 153px;
+        left: 12px;
+        text-transform: capitalize;
+      }
+      img {
+        height: 123px;
+        width: 123px;
+        border-radius: 50%;
+        border: 2px solid blanchedalmond;
+        display: inline-block;
+        position: relative;
+        left: 130px;
+        top: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="https://media.publit.io/file/q_80/websiteImages/phasergames/phaser_timers.png"
+        alt=""
+      />
+      <label for="file"> progress:</label>
+      <progress id="Progress" value="0" max="100"></progress>
+
+      <input type="number" id="getNumber" placeholder="enter number" />
+      <div id="box"></div>
+      <br />
+      <br />
+      <button id="Start">Start</button>
+
+      <button id="Pause">Pause</button>
+
+      <button id="Reset">Reset</button>
+    </div>
+
+    <script src="progress.js"></script>
+  </body>
+</html>
